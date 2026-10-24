@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>Pehchaan — Identity Record Audit</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="style.css">
+</head><body>
+<div class="app">
+<aside class="sidebar">
+ <div class="brand"><div class="brandmark"><i class="fa-regular fa-address-card" aria-hidden="true"></i></div><div class="brandtext"><b>Pehchaan</b><small>Identity, in your control</small></div></div>
+ <div><div class="navlabel">WORKSPACE</div><nav class="nav">
+  <button class="active" data-page="dashboard"><span>▦</span><i class="navtext">Overview</i></button>
+  <button data-page="records"><span>▤</span><i class="navtext">Record ledger</i></button>
+  <button data-page="import"><span>⇧</span><i class="navtext">Import records</i></button>
+  <button data-page="actions"><span>↗</span><i class="navtext">Guided actions</i></button>
+  <button data-page="reports"><span>▧</span><i class="navtext">Evidence report</i></button>
+ </nav></div>
+ <div class="sidebottom"><div class="privacy"><strong>♧ &nbsp; Privacy-first review</strong><p>Files are processed locally in this demo. Do not upload real identity documents to this prototype.</p></div></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">PERSONAL IDENTITY AUDIT</div><h1 id="pageTitle">Overview</h1></div><div class="user"><div class="avatar">MM</div><div class="usertext"><b>Merlin Mendonsa</b><small>Personal workspace</small></div><span>⌄</span></div></header>
+<section class="page active" id="dashboard">
+ <div class="welcome"><div><h2>Your identity footprint</h2><p>Review the records you know about. Investigate anything that feels unfamiliar.</p></div><div class="actions"><button class="btn secondary" onclick="navigate('records')">Review ledger ↗</button><button class="btn primary" onclick="navigate('import')">＋ Add records</button></div></div>
+ <div class="metrics">
+  <div class="metric"><div class="metric-head">Records reviewed <span class="metric-icon" style="background:#e7f1ff">▤</span></div><strong id="totalCount">12</strong><small>Across your supported sources</small></div>
+  <div class="metric"><div class="metric-head">Recognized <span class="metric-icon" style="background:#e4f3e9">✓</span></div><strong id="knownCount">9</strong><small class="good">Marked as familiar</small></div>
+  <div class="metric"><div class="metric-head">Needs attention <span class="metric-icon" style="background:#fff2d8">⌕</span></div><strong id="attentionCount">2</strong><small class="warn">Verify before taking action</small></div>
+ </div>
+ <div class="contentgrid">
+  <div class="panel"><div class="panelhead"><div><h3>Connected record sources</h3><p>Sources you have reviewed or imported</p></div><button class="textbtn" onclick="navigate('import')">Manage sources →</button></div>
+   <div class="source-list connected-sources-list" aria-label="Connected record sources">
+    <div class="source"><div class="sourceicon" style="background:#e7f1ff">▤</div><div class="sourceinfo"><strong>Credit report</strong><small>Credit accounts and enquiries</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('credit')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e4f3e9">₹</div><div class="sourceinfo"><strong>Income Tax AIS</strong><small>Financial and tax information</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('income-tax')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#fff2d8">▣</div><div class="sourceinfo"><strong>Identity documents</strong><small>Aadhaar and identity records</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('identity')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#f0eaff">₹</div><div class="sourceinfo"><strong>Banking records</strong><small>Accounts and financial activity</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('banking')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e7f1ff">▤</div><div class="sourceinfo"><strong>Tax returns</strong><small>Returns and tax filings</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('tax-returns')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e4f3e9">▥</div><div class="sourceinfo"><strong>Employment / EPFO</strong><small>Employment and provident fund records</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('employment')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#fff2d8">▣</div><div class="sourceinfo"><strong>Driving licence</strong><small>Driving licence details</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('driving')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e7f1ff">▤</div><div class="sourceinfo"><strong>Vehicle registration</strong><small>Registered vehicles</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('vehicle')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#f0eaff">▧</div><div class="sourceinfo"><strong>Voter / electoral records</strong><small>Electoral roll information</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('voter')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e4f3e9">▥</div><div class="sourceinfo"><strong>Mobile connections</strong><small>Review through Sanchar Saathi</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('telecom')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#fff2d8">⌂</div><div class="sourceinfo"><strong>Property / land records</strong><small>Property and land ownership records</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('property')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e7f1ff">▣</div><div class="sourceinfo"><strong>Education records</strong><small>Academic and qualification records</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('education')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e4f3e9">▦</div><div class="sourceinfo"><strong>Business / GST</strong><small>Business registration and GST records</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('business')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#f0eaff">§</div><div class="sourceinfo"><strong>Court records</strong><small>Case and court-related records</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('court')">View Record</button></div>
+    <div class="source"><div class="sourceicon" style="background:#fff2d8">＋</div><div class="sourceinfo"><strong>Other official reports</strong><small>Additional reports you import</small></div><button class="btn secondary source-view-btn" onclick="viewSourceRecords('other')">View Record</button></div>
+   </div>
+  </div>
+ </div>
+
+ <div class="panel ledger"><div class="panelhead"><div><h3>Records needing a closer look</h3><p>Start with the entries you haven't recognised</p></div><button class="textbtn" onclick="navigate('records')">View all records →</button></div><div id="attentionList"></div></div>
+</section>
+<section class="page" id="records">
+ <div class="welcome"><div><h2>Your record ledger</h2><p>Review each entry and classify it as recognized or not recognized.</p></div></div>
+ <div id="ledgerCategoryNotice" class="notice" hidden style="margin:0 0 14px"><span>▤</span><div style="flex:1"><b id="ledgerCategoryTitle">Category records</b><span id="ledgerCategoryDescription">Showing records in this category.</span></div><button class="btn secondary" onclick="clearLedgerCategory()">Show all records</button></div>
+ <div class="panel"><div class="toolbar"><div class="search"><input id="searchInput" placeholder="Search records, sources or descriptions…" oninput="renderRecords()"></div><select id="statusFilter" onchange="renderRecords()"><option value="all">All statuses</option><option>Recognized</option><option>Not recognized</option></select><button class="btn secondary" onclick="exportCSV()">↓ Export CSV</button></div><div class="tablewrap"><table><thead><tr><th>Record</th><th>Source</th><th>Date</th><th>Status</th><th>Action</th></tr></thead><tbody id="recordRows"></tbody></table></div></div>
+ 
+</section>
+<section class="page" id="import">
+ <div class="welcome"><div><h2>Bring records together</h2><p>Import reports and review their entries.</p></div></div>
+ <div class="panel"><div class="uploadzone"><div class="uploadicon">⇧</div><h3>Import a supported file</h3><p>Choose a JSON, CSV, TXT, or PDF file for your personal record review.</p><input class="fileinput" type="file" id="filePicker" accept=".json,.csv,.txt,.pdf,application/pdf,text/plain,text/csv,application/json" onchange="handleFile(event)"><button class="btn primary" onclick="document.getElementById('filePicker').click()">Choose file</button><div id="fileFeedback" style="margin-top:12px;color:#64746a;font-size:12px"></div></div>
+ <div class="panel" style="margin-top:17px"><div class="panelhead"><div><h3>Demo identity profile</h3><p>Fictional details only — Aadhaar and PAN are required for the demo flow; other sources are optional.</p></div><span class="pill amber">SIMULATED</span></div>
+ <div class="profile-grid"><label>Full name<input id="demoName" value="Aarav Sharma" autocomplete="off"></label><label>Demo Aadhaar number<input id="demoAadhaar" value="XXXX XXXX 4821" autocomplete="off" maxlength="19"></label><label>Demo PAN<input id="demoPan" value="ABCPX1234Q" autocomplete="off" maxlength="10"></label></div>
+
+ <div class="panelhead" style="margin-top:22px"><div><h3>Choose records to explore</h3><p>Select any categories you want to review. This demo will show fictional records that a future authorized integration might return.</p></div></div>
+ <div class="category-grid"><label class="category"><input type="checkbox" class="demo-category" value="tax" checked><span><b>Income Tax / AIS</b><small>AIS, TIS and tax-related entries</small></span></label><label class="category"><input type="checkbox" class="demo-category" value="credit" checked><span><b>Credit information</b><small>Credit score, accounts and enquiries</small></span></label><label class="category"><input type="checkbox" class="demo-category" value="aadhaar" checked><span><b>Aadhaar-related checks</b><small>Masked profile and authentication history</small></span></label><label class="category"><input type="checkbox" class="demo-category" value="mobile"><span><b>Mobile connections</b><small>Connections the user can review</small></span></label><label class="category"><input type="checkbox" class="demo-category" value="vehicle"><span><b>Driving licence / vehicle</b><small>Optional transport records</small></span></label><label class="category"><input type="checkbox" class="demo-category" value="other"><span><b>Other official records</b><small>More sources may be added in future</small></span></label></div>
+ <div class="actions" style="margin-top:15px"><button class="btn primary" onclick="runDemoDiscovery()">Run fictional record discovery ↗</button><button class="btn secondary" onclick="clearDemoDiscovery()">Clear results</button></div>
+ <div id="discoveryResults" style="margin-top:17px"><div class="empty">Select categories and run the demo discovery to view sample records and comparison flags.</div></div></div>
+ <div class="report-box"><div class="panelhead"><div><h3>Already have a government report?</h3><p>Upload any reports you already have. You can add multiple files within the same category.</p></div><span class="pill green">Optional</span></div>
+ <div id="reportImports" class="report-imports" aria-live="polite"></div>
+ <div class="report-import-actions"><button class="btn primary" type="button" onclick="addReportImport()">＋ Add another import</button><button class="btn secondary" type="button" onclick="clearReportImports()">Clear all</button></div>
+ <div id="reportFeedback" class="file-feedback-card" aria-live="polite">No reports selected yet. Add an import and choose a category.</div>
+ <button class="btn primary submit-reports" type="button" onclick="submitReportImports()">Submit</button>
+ </div>
+ <div class="steps"><div class="step"><span>①</span><b>Choose a file</b><p>Use a sample or non-sensitive test file only.</p></div><div class="step"><span>②</span><b>Review the preview</b><p>Confirm what will be added before saving.</p></div><div class="step"><span>③</span><b>Classify entries</b><p>Mark them recognised, unfamiliar or needing review.</p></div></div></div>
+
+</section>
+<section class="page" id="actions">
+ <div class="welcome"><div><h2>Guided next steps</h2><p>Use official channels to verify a record and decide what to do next.</p></div></div>
+ <div class="contentgrid">
+  <div class="panel"><div class="panelhead"><div><h3>Choose a situation</h3><p>These are guidance routes, not automatic complaints.</p></div></div>
+   <div class="source-list">
+    <div class="source"><div class="sourceicon" style="background:#fff2d8">₹</div><div class="sourceinfo"><strong>Not recognized loan or credit enquiry</strong><small>Review your credit report and contact the lender or credit bureau.</small></div><button class="rowaction" onclick="showGuidance('credit')">View steps</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e4f3e9">▤</div><div class="sourceinfo"><strong>Unexpected tax or AIS entry</strong><small>Compare the entry with your records and use the Income Tax portal.</small></div><button class="rowaction" onclick="showGuidance('tax')">View steps</button></div>
+    <div class="source"><div class="sourceicon" style="background:#e7f1ff">▣</div><div class="sourceinfo"><strong>Unknown mobile connection</strong><small>Check connections issued in your name through Sanchar Saathi.</small></div><button class="rowaction" onclick="showGuidance('mobile')">View steps</button></div>
+    <div class="source"><div class="sourceicon" style="background:#f0eaff">♙</div><div class="sourceinfo"><strong>Not recognized Aadhaar authentication</strong><small>Review available history through UIDAI's official service.</small></div><button class="rowaction" onclick="showGuidance('aadhaar')">View steps</button></div>
+   </div>
+  </div>
+  <div class="panel"><div class="panelhead"><div><h3 id="guidanceTitle">Before you act</h3><p>Suggested checklist</p></div></div><div id="guidanceBody" style="color:var(--muted);font-size:12px"><p>1. Open the original official source.</p><p>2. Check dates, amounts and identifiers carefully.</p><p>3. Save only the evidence you need.</p><p>4. Contact the relevant institution through its verified website or helpline.</p><p>5. Record your reference number and follow-up date.</p></div><button class="btn secondary" onclick="copyGuidance()">Copy checklist</button></div>
+ </div>
+ <div class="notice"><span>ⓘ</span><div><b>Stay safe from follow-up scams.</b>Never share OTPs, passwords, PINs or full identity numbers with an unverified caller. Verify contact details independently on the official website.</div></div>
+</section>
+<section class="page" id="reports">
+ <div class="welcome"><div><h2>Your review evidence pack</h2><p>Export a dated snapshot of the ledger and your review statuses.</p></div><button class="btn primary" onclick="downloadReport()">↓ Download report</button></div>
+ <div class="contentgrid"><div class="panel"><div class="panelhead"><div><h3>Report contents</h3><p>Generated from the entries in this prototype</p></div></div><div class="source-list"><div class="source"><div class="sourceicon" style="background:#e4f3e9">✓</div><div class="sourceinfo"><strong>Reviewed findings</strong><small>Names, sources, dates and statuses</small></div></div><div class="source"><div class="sourceicon" style="background:#e7f1ff">▤</div><div class="sourceinfo"><strong>Review annotations</strong><small>Current classifications and follow-up notes</small></div></div><div class="source"><div class="sourceicon" style="background:#fff2d8">◷</div><div class="sourceinfo"><strong>Generated date</strong><small id="reportDate"></small></div></div></div></div><div class="panel"><div class="panelhead"><div><h3>Important limitation</h3><p>What this export does and does not mean</p></div></div><p style="color:var(--muted);font-size:12px">This report records your review. It is not an official credit report, proof of identity theft, or a guarantee that every relevant record has been found. Verify any concern with the original institution.</p></div></div>
+ <div class="panel ledger"><div class="panelhead"><div><h3>Current ledger summary</h3><p>Counts update as you classify records</p></div></div><div id="reportSummary"></div></div>
+</section>
+<footer>PEHCHAAN · Know what your identity records reveal · OrbitX demo prototype</footer>
+</main>
+</div>
+<div id="sourceRecordModal" class="source-record-modal" role="dialog" aria-modal="true" aria-labelledby="sourceRecordTitle" hidden>
+ <div class="source-record-dialog"><div class="source-record-head"><div><h2 id="sourceRecordTitle">Uploaded records</h2><p id="sourceRecordSubtitle">Files selected in this browser session</p></div><button class="source-record-close" onclick="closeSourceRecords()" aria-label="Close">×</button></div><div id="sourceRecordBody"></div><div class="source-record-foot"><span>Files stay in this browser prototype; no external verification is performed.</span><button class="btn secondary" onclick="closeSourceRecords()">Close</button></div></div>
+</div><div class="toast" id="toast"></div>
+
+
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body></html>
