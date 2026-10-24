@@ -4,7 +4,11 @@
 
 The platform provides a centralized dashboard where users can import reports, explore records by category, maintain a record ledger, classify records as **Recognized** or **Not Recognized**, and receive guided steps for investigating unfamiliar entries.
 
-### Key Features
+## Live Demo
+
+**Website:** https://devbyshreya.github.io/Pehchaan/
+
+## Key Features
 
 - Centralized identity record dashboard
 - Record Ledger for managing identity-linked records
@@ -18,13 +22,19 @@ The platform provides a centralized dashboard where users can import reports, ex
 - Responsive and user-friendly interface
 - Privacy-focused workflow
 
-### Tech Stack
+## Tech Stack
 
-**Frontend:** HTML, CSS, JavaScript  
-**Backend:** Java Spring Boot  
-**Database:** PostgreSQL / MySQL  
-**Architecture:** REST API-based frontend–backend integration
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Java Spring Boot
+- **Database:** PostgreSQL / MySQL
+- **Architecture:** REST API-based frontend–backend integration
 
-### Goal
+## Goal
 
 Pehchaan aims to give users a clearer view of their digital and official identity footprint by bringing records from different categories into one organized interface, making unfamiliar entries easier to identify, review, and act upon.
+
+## Author
+
+**Shreya Singh**
+
+- **GitHub:** https://github.com/devbyshreya
