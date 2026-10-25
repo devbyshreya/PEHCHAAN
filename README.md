@@ -1,8 +1,8 @@
 # Pehchaan — Identity Record Audit
 
-**Pehchaan** is a privacy-focused identity record auditing platform designed to help users review and organize records associated with their identity across multiple sources.
+**Pehchaan** is a privacy-focused frontend web application designed to help users review and organize identity-related records through a centralized, user-friendly dashboard.
 
-The platform provides a centralized dashboard where users can import reports, explore records by category, maintain a record ledger, classify records as **Recognized** or **Not Recognized**, and receive guided steps for investigating unfamiliar entries.
+The interface allows users to explore records by category, review imported reports, maintain a record ledger, classify entries as **Recognized** or **Not Recognized**, and access guided steps for investigating unfamiliar records.
 
 ## Live Demo
 
@@ -11,27 +11,30 @@ The platform provides a centralized dashboard where users can import reports, ex
 ## Key Features
 
 - Centralized identity record dashboard
-- Record Ledger for managing identity-linked records
-- 15 supported record categories
-- Category-wise report and record viewing
-- Import and review reports
+- Record Ledger interface for organizing records
+- Support for 15 identity record categories
+- Category-wise record viewing
+- Report import and review interface
 - Recognized / Not Recognized classification
 - Guided actions for unfamiliar records
-- Evidence report generation
-- Search and filtering of records
-- Responsive and user-friendly interface
-- Privacy-focused workflow
+- Evidence report generation interface
+- Search and filtering functionality
+- Responsive and user-friendly UI
+- Privacy-focused design
 
 ## Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Java Spring Boot
-- **Database:** PostgreSQL / MySQL
-- **Architecture:** REST API-based frontend–backend integration
+- **Frontend:** HTML5, CSS3, JavaScript
+- **API Integration:** REST API integration with the backend
+- **Tools:** VS Code, Git, GitHub
+
+## My Contribution
+
+As the **Frontend Developer**, I designed and developed the user interface of Pehchaan, focusing on responsive layouts, dashboard components, record management interfaces, and interactive features. I also worked on integrating the frontend with backend REST APIs to display and manage identity-related records.
 
 ## Goal
 
-Pehchaan aims to give users a clearer view of their digital and official identity footprint by bringing records from different categories into one organized interface, making unfamiliar entries easier to identify, review, and act upon.
+Pehchaan aims to make identity-related records easier to review and organize through a centralized, accessible, and user-friendly interface.
 
 ## Author
 
