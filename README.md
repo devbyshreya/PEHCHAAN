@@ -6,7 +6,7 @@ The interface allows users to explore records by category, review imported repor
 
 ## Live Demo
 
-**Website:** https://devbyshreya.github.io/Pehchaan/
+**Website:** https://devbyshreya.github.io/PEHCHAAN/
 
 ## Key Features
 
